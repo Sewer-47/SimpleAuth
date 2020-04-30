@@ -1,0 +1,47 @@
+defaultLang: en_US #Default language
+forceDefaultLang: false
+authNotificationDelay: 3 #Authorization notification delay in seconds
+authTimeout: 20 #Authorization time in seconds
+authMaxAttemps: 5 #Max failure login attemps
+captchaLength: 5 #Lenght of capcha code
+captchaChars: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+captchaPosition: chat #<chat/system/action_bar>
+minPasswordLength: 4 #Minimum password length
+maxPasswordLength: 15 #Maximum password length
+allowedPasswordChars: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+loginSessionValidity: 1d #todo
+
+allowedCommands: #SimpleAuth commands is force allowed
+  - ping
+
+disabledEvents: #TODO
+  - "PlayerInteractEvent"
+  - "PlayerAnimationEvent"
+  - "BlockBreakEvent"
+  - "BlockPlaceEvent"
+  - "PlayerMoveEvent"
+  - "EntityDamageByEntityEvent"
+  - "EntityDamageByBlockEvent"
+  - "EntityDamageEvent"
+  - "EntityCombustByBlockEvent"
+  - "EntityPickupItemEvent"
+  - "PlayerDropItemEvent"
+  - "PlayerPickupItemEvent"
+  - "PlayerChatEvent"
+  #- komendy jeszcze
+
+
+modules: #If you want to disable module type false
+  registrationBanModule: false #Disable registration
+  loggedOutMoveModule: true #Disable moving when player is not logged in
+  passwordMatchModule: true #Passwords must be same when using register command
+  nicknamePasswordModule: true #Player's nickname can not be used as password
+  blackListPasswordModule: true #Blacklist of passwords look blacklist.txt file
+  passwordLengthModule: true #Maxmimum and minimum password length configurable in minPasswordLength and maxPasswordLength sections
+  authorizationNotificationModule: true #Informing player that he has not been authorized
+  hideCommandLogModule: true #Hide register/login etc commands in console
+  loginAttemptsModule: true #Maximum number of login attempts before player being kick from server. Configurable in authMaxAttemps section
+  authorizationTimeoutModule: true #Kick player after login time. Configurable in authTimeout secion.
+  loginSessionModule: true #Automatic login
+  passwordAllowedCharsModule: true
+  captchaModule: true

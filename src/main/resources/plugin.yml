@@ -1,0 +1,28 @@
+name: SimpleAuth
+author: Sewer47
+main: com.github.sewer47.SimpleAuthPlugin
+version: 1.0
+api-version: 1.15
+website: https://github.com/Sewer-47/SimpleAuth
+softdepend:
+  - Skript
+commands:
+  login:
+    aliases:
+      - l
+      - log
+  logout:
+    aliases:
+      - lout
+  register:
+    aliases:
+      - reg
+      - r
+  unregister:
+    aliases:
+      - unreg
+  changepassword:
+    aliases:
+      - changepass
+      - cp
+  module:

@@ -1,0 +1,4 @@
+  #efekty np ciemnosc jak gracz wejdzie i to znika jak sie zaloguje na modulach
+  #falszywe koordynaty(jesli sie da) i eq na modulach
+  #autologowanie premium ale to kiedys na modulach
+  #zapis danych json/flat/sql

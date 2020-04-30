@@ -1,0 +1,50 @@
+/*
+ * MIT License
+ *
+ * Copyright (c) 2020 Seweryn S
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+package com.github.sewer47.module;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class ModuleManager {
+
+    private final Map<String, Module> byName = new TreeMap<>(String.CASE_INSENSITIVE_ORDER); //ignore case
+
+    public void registerModule(Module module) {
+        this.byName.put(module.getName(), module);
+    }
+
+    public void unregisterModule(Module module) {
+        this.byName.remove(module.getName());
+    }
+
+    public Module getModule(String moduleName) {
+        return this.byName.get(moduleName);
+    }
+
+    public Collection<Module> getRegistered() {
+        return this.byName.values();
+    }
+}
